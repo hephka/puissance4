@@ -1,11 +1,15 @@
-import readlineSync from 'readline-sync'
-import chalk from 'chalk'
-import { myRules } from './src/rules.js'
 import { grille } from './src/grille.js'
 import { startGame } from './src/start.js'
+import { playerChoice } from './src/prompt.js'
 
 const app = () => {
-    startGame()
+    let gameReady = false
+    while (!gameReady) {
+        startGame()
+        gameReady = true
+    }
+    grille()
+    playerChoice()
 }
 
 app()
