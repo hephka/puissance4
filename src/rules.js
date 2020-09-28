@@ -1,10 +1,20 @@
+import chalk from 'chalk'
+
 export const myRules = () => {
-    console.log(`“Le but du jeu est d'aligner 4 pions sur une grille comptant 6 rangées et 7 colonnes. 
-    Chaque joueur dispose de 21 pions d'une couleur (par convention, en général jaune ou rouge). 
-    Tour à tour les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse 
-    alors jusqu'à la position la plus basse possible dans ladite colonne à la suite de quoi 
-    c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un 
-    alignement (horizontal, vertical ou diagonal) d'au moins quatre pions de sa couleur. 
-    Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs 
-    n'a réalisé un tel alignement, la partie est déclarée nulle.” (Wikipédia)`)
+    console.log(
+        chalk.bgGreen.black(`
+    Pour jouer au puissance 4, il vous faut :
+    * Le plateau du jeu et ses 42 emplacements pour jetons répartis en 6 lignes et 7 colonnes
+    * 42 jetons de 2 couleurs différentes
+    * Être 2 joueurs.
+    
+    Commencer une partie de puissance 4 :
+    Pour commencer une partie de puissance 4, on désigne le premier joueur. Celui­ci met un de ses jetons de couleur dans l’une des colonnes de son choix. Le jeton tombe alors en bas de la colonne.
+    Le deuxième joueur insère à son tour son jeton, de l’autre couleur dans la colonne de son choix. Et ainsi de suite jusqu’à obtenir une rangée de 4 jetons de même couleur.
+    
+    Comment gagner une partie de puissance 4 :
+Pour gagner une partie de puissance 4, il suffit d’être le premier à aligner 4 jetons de sa couleur horizontalement, verticalement et diagonalement.
+Si lors d’une partie, tous les jetons sont joués sans qu’il y est d’alignement de jetons, la partie est déclaré nulle.
+    `)
+    )
 }
